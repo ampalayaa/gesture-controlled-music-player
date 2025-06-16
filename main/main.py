@@ -14,7 +14,7 @@ while True:
     frame, hands  = tracker.find_hands(frame)
     
     if hands:
-        landmarks = tracker.get_landmark_position(hands[0], frame.shape)
+        landmarks = tracker.get_landmark_positions(hands[0], frame.shape)
         if 4 in landmarks and 0 in landmarks:
             thumb_tip = landmarks[4]
             index_tip = landmarks[8]
